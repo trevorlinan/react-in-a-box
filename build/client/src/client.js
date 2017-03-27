@@ -1,7 +1,7 @@
 import 'react-hot-loader/patch';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 
@@ -15,9 +15,9 @@ const render = Component => {
   ReactDOM.render(
     <AppContainer>
 	    <Provider store={ store }>
-			<Router>
+			<BrowserRouter>
 	      		<Component />
-	      	</Router>
+	      	</BrowserRouter>
 		</Provider>
     </AppContainer>,
     !!module.hot ? document.getElementById('root') : document
