@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import Template from './views/template';
 import Home from './containers/home/home';
@@ -16,7 +16,11 @@ export default class App extends Component {
 		</Template>
 	);
 
-	Route = () => ( <Route path='/' component={() => <Home {...initialProps} /> } /> );
+	Route = () => (
+	    <BrowserRouter>
+            <Route path='/' component={() => <Home {...initialProps} /> } />
+        </BrowserRouter>
+    );
 
 	render = () => {
 		return !!module.hot ? <this.Route /> : this.activateTemplate(this.Route);
