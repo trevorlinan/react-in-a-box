@@ -1,4 +1,6 @@
 /node_modules
 /.idea
 /.env
-!dist/!assets/*
+dist/assets/*
+!.keep
+!dist/assets/.keep
