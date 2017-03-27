@@ -4,10 +4,6 @@ import styles from './home.scss';
 import About from '../../components/about/about';
 
 export default class Home extends Component {
-	constructor (props) {
-		super(props);
-	}
-
 	render = () => (
         <div className={styles.homeContainer}>
             <div className={styles.homeTitleContainer}>

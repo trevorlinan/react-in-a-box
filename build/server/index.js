@@ -1,5 +1,4 @@
 import React from 'react';
-import { StaticRouter } from 'react-router';
 import { renderToString } from 'react-dom/server';
 import { Provider } from 'react-redux';
 
@@ -12,11 +11,10 @@ const store = createStore();
 export default function render (req, res) {
 	let context = {};
 
+	// App props are required to determine React Router type
 	const html = renderToString(
 		<Provider store={ store }>
-			<StaticRouter location={req.url} context={context}>
-				<App />
-			</StaticRouter>
+            <App {...{ server: true , req: req, context: context }} />
 		</Provider>
 	)
 

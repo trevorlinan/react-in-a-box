@@ -8,13 +8,14 @@ import App from './app';
 
 // Redux Store
 import createStore from './createStore';
-const store = createStore(); 
+const store = createStore();
 
+// Component props are required to determine React Router type
 const render = Component => {
   ReactDOM.render(
     <AppContainer>
 	    <Provider store={ store }>
-            <Component />
+            <Component {...{ server: false}} />
 		</Provider>
     </AppContainer>,
     !!module.hot ? document.getElementById('root') : document
@@ -24,6 +25,5 @@ const render = Component => {
 render(App);
 
 if (!!module.hot) {
-	console.log('Module HOT!');
 	module.hot.accept('./app', () => { render(App) });
 }
