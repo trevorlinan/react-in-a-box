@@ -31,6 +31,8 @@
     > npm run build:server
 
 
+There is currently no production build for Webpack. It is empty for you to setup based on your needs.
+
 ## Testing
 
 #### Run tests with Jest
