@@ -7,7 +7,7 @@
 ## Installation
 
     > Fork this repo
-    > git clone https://github.com/<Your URL>/react-in-a-box.git <Your App Name>
+    > git clone https://github.com/<Your Username>/react-in-a-box.git <Your App Name>
     > cd <Your App Name>
     > yarn install
     
