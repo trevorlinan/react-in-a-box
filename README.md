@@ -6,29 +6,30 @@
 
 ## Installation
 
-    > git clone https://github.com/trevorlinan/react-in-a-box.git <Your App Name>
+    > Fork this repo
+    > git clone https://github.com/<Your URL>/react-in-a-box.git <Your App Name>
     > cd <Your App Name>
-    > npm install
+    > yarn install
     
 ## Run Application
 
 #### Start Isomorphic Application
 
-    > npm run start
+    > yarn run start
     
 #### Start Development Environment
 
-    > npm run dev
+    > yarn run dev
 
 ## Webpack
 
 #### Build client
 
-    > npm run build:client
+    > yarn run build:client
     
 #### Build server
 
-    > npm run build:server
+    > yarn run build:server
 
 
 There is currently no production build for Webpack. It is empty for you to setup based on your needs.
@@ -37,8 +38,8 @@ There is currently no production build for Webpack. It is empty for you to setup
 
 #### Run tests with Jest
 
-    > npm run test:jest
+    > yarn run test:jest
     
 #### Run tests with Mocha
 
-    > npm run test:mocha
+    > yarn run test:mocha

@@ -8,7 +8,7 @@
     "test:mocha": "BABEL_ENV=node mocha",
     "build:client": "BABEL_ENV=browser webpack --config ./webpack/webpack.dev-client.config.js --display-error-details",
     "build:server": "BABEL_ENV=browser webpack --config ./webpack/webpack.dev-server.config.js --display-error-details",
-    "start": "npm run build:client && npm run build:server && node ./build/server/server.js",
+    "start": "yarn run build:client && yarn run build:server && node ./build/server/server.js",
     "dev": "BABEL_ENV=browser webpack-dev-server --config ./webpack/webpack.dev-client.config.js --inline --hot"
   },
   "repository": {

@@ -718,7 +718,7 @@ function fromByteArray (uint8) {
 
 var base64 = __webpack_require__("../node_modules/base64-js/index.js")
 var ieee754 = __webpack_require__("../node_modules/ieee754/index.js")
-var isArray = __webpack_require__("../node_modules/buffer/node_modules/isarray/index.js")
+var isArray = __webpack_require__("../node_modules/isarray/index.js")
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -2500,18 +2500,6 @@ function isnan (val) {
 
 /***/ }),
 
-/***/ "../node_modules/buffer/node_modules/isarray/index.js":
-/***/ (function(module, exports) {
-
-var toString = {}.toString;
-
-module.exports = Array.isArray || function (arr) {
-  return toString.call(arr) == '[object Array]';
-};
-
-
-/***/ }),
-
 /***/ "../node_modules/css-loader/index.js?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!../node_modules/sass-loader/lib/loader.js!../node_modules/postcss-loader/index.js!../build/client/src/components/about/about.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3230,7 +3218,7 @@ module.exports = focusNode;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global) {
+
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -3256,7 +3244,7 @@ module.exports = focusNode;
  * @return {?DOMElement}
  */
 function getActiveElement(doc) /*?DOMElement*/{
-  doc = doc || global.document;
+  doc = doc || (typeof document !== 'undefined' ? document : undefined);
   if (typeof doc === 'undefined') {
     return null;
   }
@@ -3268,7 +3256,6 @@ function getActiveElement(doc) /*?DOMElement*/{
 }
 
 module.exports = getActiveElement;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__("../node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -5236,8 +5223,10 @@ module.exports = invariant;
 /***/ "../node_modules/isarray/index.js":
 /***/ (function(module, exports) {
 
+var toString = {}.toString;
+
 module.exports = Array.isArray || function (arr) {
-  return Object.prototype.toString.call(arr) == '[object Array]';
+  return toString.call(arr) == '[object Array]';
 };
 
 
@@ -25709,10 +25698,20 @@ var withRouter = function withRouter(Component) {
 
 /***/ }),
 
+/***/ "../node_modules/react-router/node_modules/isarray/index.js":
+/***/ (function(module, exports) {
+
+module.exports = Array.isArray || function (arr) {
+  return Object.prototype.toString.call(arr) == '[object Array]';
+};
+
+
+/***/ }),
+
 /***/ "../node_modules/react-router/node_modules/path-to-regexp/index.js":
 /***/ (function(module, exports, __webpack_require__) {
 
-var isarray = __webpack_require__("../node_modules/isarray/index.js")
+var isarray = __webpack_require__("../node_modules/react-router/node_modules/isarray/index.js")
 
 /**
  * Expose `pathToRegexp`.
